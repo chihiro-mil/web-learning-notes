@@ -8,13 +8,13 @@ console.log('Hello');
 開発者ツールのconsoleに表示される
 主にプログラム動作テストで用いる
 
-###　console.log()
+### console.log()
 ()内のテキストや数値を表示
 
-###　console.dir()
+### console.dir()
 ()内の複雑なデータをリスト表示
 
-###　console.error()
+### console.error()
 エラーをリスト表示
 
 ---
@@ -46,6 +46,7 @@ document.getElementById('title').textContent = "変更";
 3. textContent（textContentはプロパティ。プロパティはオブジェクトの状態を表す）　→ テキスト変更
 
 結果
+
 こんにちは →　変更
 
 ※JavaScriptは大文字・小文字を区別するのでgetElementByIdなどは書き方を間違えないように注意
