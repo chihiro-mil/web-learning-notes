@@ -33,3 +33,14 @@ git branch
 ```bash
 git push origin update-sample
 ```
+
+# プルリクエストまでの手順
+1. mainブランチから新しいブランチ（update-sample）を作成して切り替える
+2. 切り替えたブランチで作業（追加・編集）
+3. コミットする
+4. リモートリポジトリにpushする（切り替えたブランチと作業内容が反映される）
+5. レビュアーを指定してプルリクエストを作成する
+6. レビューOK
+7. mainブランチにマージ
+
+![Git flow1](images/git_flow_03.png)
