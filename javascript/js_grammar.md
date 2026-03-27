@@ -91,3 +91,32 @@ console.log(answer);
 4. ユーザーが「yes」か「no」を以外を入力した時 → 「yesかnoでお答えください」が表示
 ※answer === 'yes'は入力が完全一致でないと「yesかnoでお答えください」が表示される。
 (answer.toLowerCase() === 'yes')で小文字や大文字でも「ゲームを開始します」が表示
+
+
+## JavaScriptの演算子
+- a === b   aとbが同じ時True
+- a !== b   aとbが同じではない時True
+- a < b     aがbより小さい時True
+- a <= b    aがb以下の時True
+- a > b     aがbより大きい時True
+- a >= b    aがb以上の時True
+
+
+## 複数の条件式を組み合わせて１つの条件を作る
+- &&演算子
+
+```javascript
+if(number >= 10 && number < 25);
+```
+
+例）numberが10以上　かつ　25より小さい時Trueになる
+両方の条件を満たす時に実行される
+
+- ||演算子
+
+```javascript
+if(number === 10 || number === 25);
+```
+
+例）numberが10　もしくは　25時Trueになる
+片方どちらか、もしくは両方の条件を満たす時に実行される
