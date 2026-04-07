@@ -120,3 +120,63 @@ if(number === 10 || number === 25);
 
 例）numberが10　もしくは　25時Trueになる
 片方どちらか、もしくは両方の条件を満たす時に実行される
+
+
+## While文
+繰り返し同じような処理を何度も実行したい時に使う
+
+```javascript
+let number = 1;
+while(number <= 10) {
+    console.log(number);
+    number = number + 1;
+}
+```
+
+処理の流れ
+1. 変数numberに数字の1を入れる
+2. While文の条件（number <= 10）がTrueの間、処理を繰り返す
+3. 繰り返しの中でnumberに1を足す
+　例）１回目　number(1) + 1 = 2、　２回目　number(2) + 1 = 3、 ・・・結果が10になるまで
+
+**無限ループに注意**
+常にTrueになってしまう条件式を書いてしまうと、処理が止まらなくなってしまう。
+
+## ファンクション（関数）
+何度も行う処理を１つにまとめる小さいサブプログラム
+
+```javascript
+function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
+}
+
+console.log('服の値段は' + total(5000) + '円（税込）です。');
+document.getElementById('price').textContent = '服の値段は' + total(5000) + '円（税込）です。';
+```
+
+
+処理の流れ
+1. ファンクション名から要求されたパラメータを受け取る（本体価格5000を受け取る）
+2. 5000×0.1　→　本体価格＋税金価格　の計算処理を実行
+3. 計算結果(戻り値)を呼び出し元に返す　　服の値段は5500円（税込）です。
+
+```javascript
+function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
+}
+
+document.getElementById('price').textContent = '服の値段は' + total(5000) + '円（税込）です。';
+document.getElementById('price2').textContent = 'アウターの値段は' + total(10000) + '円（税込）です。';
+document.getElementById('price3').textContent = '靴の値段は' + total(8000) + '円（税込）です。';
+
+```
+
+**利点**
+- ファンクションを使うことでtotal(price)の処理を何度も呼び出しできる
+- 税金を変更したい時に一か所変えるだけ（const tax = 0.1;を変更するだけ）ですべての税金が変更できる
+
+
+## 配列
+複数のデータを１つにまとめて、順番に管理できる仕組み
