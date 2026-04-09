@@ -180,6 +180,7 @@ document.getElementById('price3').textContent = '靴の値段は' + total(8000) 
 
 ## 配列
 複数のデータを１つにまとめて、順番に管理できる仕組み
+let 変数名　= [データ0, データ1, データ2];
 
 ```javascript
 let list = ['航空券', '洋服', '化粧品', 'デジカメ'];
@@ -203,3 +204,47 @@ for(let item of list) {
 - 配列最後にデータを追加　→　変数（配列）.push(データ)
 - 配列最初のデータを削除　→　変数（配列）.shift()
 - 配列最初にデータを追加　→　変数（配列）.unshift(データ)
+
+
+## オブジェクト
+様々なデータをまとめて、１つの変数として扱う
+オブジェクトの作成方法
+let 変数名　= {プロパティ名１: データ, プロパティ名２: データ, プロパティ名３: データ};
+
+オブジェクトからデータを読み取る方法は２つ
+- オブジェクト名.プロパティ名
+- オブジェクト名['プロパティ名'] ←シングルクォート（ダブルクォート可）を忘れずにつける
+
+プロパティのデータを書き換える方法は２つ
+- オブジェクト名.プロパティ名 = 新しいデータ;
+- オブジェクト名['プロパティ名'] = 新しいデータ;
+
+```javascript
+let book = {title: 'python', price: 3000, stock: 5};
+console.log(book);
+
+book.stock = 15;
+console.log(book.stock);
+```
+
+処理の流れ
+1. let book　= {プロパティ名１: データ, プロパティ名２: データ, プロパティ名３: データ}; でオブジェクトを作成
+2. console.log(book);　でオブジェクトの全体のデータが表示
+3. book.stock = 15;　でstockのデータを書き換え
+4. console.log(book.stock);　でstockのデータのみ表示
+
+
+for文をつかってすべてのプロパティを読み取る場合
+
+```javascript
+let book = {title: 'python', price: '3000', stock: 5};
+for(let p in book) {
+    console.log(p + '=' + book[p]);
+}
+```
+
+処理の流れ
+1. let book　= {プロパティ名１: データ, プロパティ名２: データ, プロパティ名３: データ}; でオブジェクトを作成
+2. for(let p in book)　で{}の中の処理内容をプロパティ（p）のキー分繰り返す
+3. console.log(p + '=' + book[p]);　で pでプロパティ、book[p]でデータを取得　→　「title=python」のように表示
+
