@@ -248,3 +248,6 @@ for(let p in book) {
 2. for(let p in book)　で{}の中の処理内容をプロパティ（p）のキー分繰り返す
 3. console.log(p + '=' + book[p]);　で pでプロパティ、book[p]でデータを取得　→　「title=python」のように表示
 
+
+**注意**
+for文は配列ように順番に表示されるとは限らない。（上記の例　title、price、stockは記載順には表示されない場合がある）
