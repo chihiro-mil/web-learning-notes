@@ -86,3 +86,24 @@ document.getElementById('time').textContent = output;
 1. getMonthは仕様として0～11を返す（1月が0）ため、人間が理解しやすい月にするには+1が必要
 ほかにズレが生じてしまう代表的なメゾットのgetDay（曜日が0(日)）もある
 2. new Date()のように、Dateオブジェクトはnewを使ってインスタンス化（初期化）する必要がある
+
+# Mathオブジェクト
+## 小数点を切り捨てる
+小数点の切り捨ての桁を指定する。四則演算以外の計算。
+
+```html
+<p>10％OFFの値段は <span id="output"></span> です。</p>
+```
+
+```javascript
+const price = 1980;
+const discount = 0.1;
+
+function point(num, digit) {
+    const mover =  10 ** digit;
+    return Math.floor(num * mover) / mover;
+}
+const discounted = price * (1 - discount);
+
+document.getElementById('output').textContent = point(discounted, 0) + '円（割引後）';
+```
