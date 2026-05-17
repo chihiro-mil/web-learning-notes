@@ -144,6 +144,7 @@ while(number <= 10) {
 
 ## ファンクション（関数）
 何度も行う処理を１つにまとめる小さいサブプログラム
+ファンクションは下記 function total(price) を const total = (price) => {処理内容} のように　=>　で省略化できる
 
 ```javascript
 function total(price) {
